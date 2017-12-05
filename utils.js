@@ -1,18 +1,19 @@
 'use strict';
 
-var utils = require('lazy-cache')(require);
-var fn = require;
-require = utils;
+//var utils = require('lazy-cache')(require);
+//var fn = require;
+//require = utils;
 
+var utils = {};
 /**
  * Lazily required module dependencies
  */
 
-require('arr-union', 'union');
-require('define-property', 'define');
-require('isobject', 'isObj');
-require('static-extend');
-require = fn;
+utils.union = require('arr-union');
+utils.define = require('define-property');
+utils.isObj = require('isobject');
+utils.staticExtend = require('static-extend');
+//require = fn;
 
 /**
  * Expose `utils`
